@@ -1,2 +1,20 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+# ⚙️ The Relic Registry
+# This sigil binds artifacts to their lineage, governs merging, and preserves formatting rituals.
+
+# Treat common image formats as binary relics
+*.png    binary
+*.jpg    binary
+*.jpeg   binary
+*.gif    binary
+
+# Maintain PSD and AI source fidelity (no diffs, union merges)
+*.psd    binary merge=union
+*.ai     binary merge=union
+
+# Enforce LF line endings on text scrolls
+*.md     text eol=lf
+*.txt    text eol=lf
+
+# Preserve metadata integrity
+*.json   text eol=lf
+*.yml    text eol=lf
