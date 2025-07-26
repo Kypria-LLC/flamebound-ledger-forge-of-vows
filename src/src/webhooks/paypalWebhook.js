@@ -1,4 +1,4 @@
-// stripe-server.js
+LOGBOOK_WEBHOOK_URL=https://discord.com/api/webhooks/…// stripe-server.js
 require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
