@@ -1,4 +1,5 @@
-import express from 'express';
+# Install dependencies
+npm install express body-parser stripe dotenv axiosimport express from 'express';
 import bodyParser from 'body-parser';
 import fetch from 'node-fetch';
 import {
