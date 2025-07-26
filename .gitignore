@@ -1,16 +1,31 @@
-# Node rules:
-## Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
-.grunt
+# 🛡️ The Sanctum Ward
+# Only mythic matter crosses the threshold—silence the noise.
 
-## Dependency directory
-## Commenting this out is preferred by some people, see
-## https://docs.npmjs.com/misc/faq#should-i-check-my-node_modules-folder-into-git
-node_modules
+# System files and temp fragments
+.DS_Store
+Thumbs.db
+*.swp
+*.tmp
 
-# Book build output
-_book
+# Node and Python build caches
+node_modules/
+__pycache__/
+*.py[cod]
+pip-log.txt
 
-# eBook build output
-*.epub
-*.mobi
-*.pdf
+# Log scrolls and runtime artifacts
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDE and editor wards
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Build and distribution relics
+dist/
+build/
+coverage/
