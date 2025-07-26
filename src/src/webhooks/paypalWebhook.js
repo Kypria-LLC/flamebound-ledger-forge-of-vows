@@ -1,4 +1,73 @@
-# Install dependencies
+// stripe-server.js
+require('dotenv').config();
+const express = require('express');
+const bodyParser = require('body-parser');
+const Stripe = require('stripe');
+const axios = require('axios');
+
+const stripe = Stripe(process.env.STRIPE_SECRET_KEY);
+const app = express();
+
+// Stripe requires the raw body to verify signature
+app.post(
+  '/webhook/stripe',
+  bodyParser.raw({ type: 'application/json' }),
+  (req, res) => {
+    let event;
+    try {
+      event = stripe.webhooks.constructEvent(
+        req.body,
+        req.headers['stripe-signature'],
+        process.env.STRIPE_WEBHOOK_SECRET
+      );
+    } catch (err) {
+      console.error('⚠️ Stripe signature verification failed.', err);
+      return res.sendStatus(400);
+    }
+
+    if (event.type === 'checkout.session.completed') {
+      const session = event.data.object;
+      const email   = session.customer_details.email;
+      const id      = session.id;
+      const amount  = session.amount_total / 100;
+
+      handleSponsor({
+        source: 'Stripe',
+        email,
+        id,
+        amount
+      });
+    }
+
+    res.sendStatus(200);
+  }
+);
+
+// Reuse handleSponsor from above, or redefine here
+async function handleSponsor({ source, email, id, amount }) {
+  // Discord role grant
+  await axios.post(
+    `https://discord.com/api/guilds/${process.env.DISCORD_GUILD_ID}/members/${email}`,
+    { roles: [process.env.DISCORD_SPONSOR_ROLE_ID] },
+    { headers: { Authorization: `Bot ${process.env.DISCORD_BOT_TOKEN}` } }
+  );
+
+  // Artifact delivery log
+  console.log(`Delivering artifact for ${email}: https://mybucket.s3/${id}.zip`);
+
+  // Logbook embed
+  await axios.post(process.env.LOGBOOK_WEBHOOK_URL, {
+    embeds: [{
+      title: `New Sponsor via ${source}`,
+      description: `💳 $${amount} ${source} from ${email}\nSession ID: ${id}`,
+      timestamp: new Date().toISOString()
+    }]
+  });
+}
+
+app.listen(process.env.PORT || 3001, () => {
+  console.log('Stripe webhook listener running');
+});# Install dependencies
 npm install express body-parser stripe dotenv axiosimport express from 'express';
 import bodyParser from 'body-parser';
 import fetch from 'node-fetch';
