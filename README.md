@@ -1,4 +1,5 @@
-# 🧿 MYTHOLOGY  
+# Install dependencies
+npm install express body-parser ipn dotenv axios# 🧿 MYTHOLOGY  
 *A gallery of inspired artifacts from the Kyprian continuum.*
 
 This private vault chronicles illustrations born from prophecy, parody, and mutation. Every image is more than art—it's a relic, a riffable echo of Kypria's mythic past and speculative future.
