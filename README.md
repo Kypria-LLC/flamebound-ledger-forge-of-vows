@@ -1,3 +1,7 @@
+![Sponsors](https://img.shields.io/github/sponsors/alexandros-thomson?style=for-the-badge)
+![Stars](https://img.shields.io/github/stars/alexandros-thomson/alexandros-thomson?style=for-the-badge)
+![Watchers](https://img.shields.io/github/watchers/alexandros-thomson/alexandros-thomson?style=for-the-badge)
+![Contributions](https://github-readme-stats.vercel.app/api?username=alexandros-thomson&show_icons=true&theme=radical)
 🧿 MYTHOLOGY  
 *A gallery of inspired artifacts from the Kyprian continuum.*
 
