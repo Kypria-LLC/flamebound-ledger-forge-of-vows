@@ -1,4 +1,8 @@
-![Sponsors](https://img.shields.io/github/sponsors/alexandros-thomson?style=for-the-badge)
+# Your Project Name
+
+![Coverage Badge](./coverage-badge.svg)
+
+A mythic fusion of narrative and code. Every test, every badge, every sponsor role—etched in legend.![Sponsors](https://img.shields.io/github/sponsors/alexandros-thomson?style=for-the-badge)
 ![Stars](https://img.shields.io/github/stars/alexandros-thomson/alexandros-thomson?style=for-the-badge)
 ![Watchers](https://img.shields.io/github/watchers/alexandros-thomson/alexandros-thomson?style=for-the-badge)
 ![Contributions](https://github-readme-stats.vercel.app/api?username=alexandros-thomson&show_icons=true&theme=radical)
