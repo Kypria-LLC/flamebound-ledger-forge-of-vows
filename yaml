@@ -1,0 +1,9 @@
+name: "Audit Flamekeeper"
+mint_date: "2025-07-31"
+trigger_event: "Copilot review confirms production readiness of dropBadge function"
+recipient: "alexandros-thomson"
+drop_channels:
+  - "Discord: #i-made-this"
+  - "Slack: #shrine-threads"
+  - "Modmail: ops-certifications"
+  - "Email: audit-echo@kypria.llc"
