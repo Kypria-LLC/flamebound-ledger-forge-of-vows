@@ -1,0 +1,7 @@
+DISCORD_TOKEN=<your bot token>
+GUILD_ID=<your guild ID>
+SENIOR_ROLE_ID=<role ID for “Senior”>
+JUNIOR_ROLE_ID=<role ID for “Junior”>
+VAULT_CORE_CHANNEL_ID=<channel ID for #vault-core>
+MENTORING_CHANNEL_ID=<channel ID for #mentoring-requests>
+AUDIT_LOG_PATH=./logs/role-grants.json
