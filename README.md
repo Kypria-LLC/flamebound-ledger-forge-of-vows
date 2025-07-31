@@ -61,4 +61,21 @@ When a fan pledges, they instantly:
 - Trigger **artifact drops** from the vault
 - Stamp the **canon logbook** with pledge timestamp, tier, and sigil
 
-Every repo entry, artifact, and role is a piece of the living legend. Choose your path. Bind your name.
+Every repo entry, artifact, and role is a piece of the living legend. Choose your path. Bind your name./kypria-core/
+├── README.md                  # Living legend scroll—intro, rituals, sponsor glyphs
+├── .github/
+│   ├── workflows/             # CI/CD invocations, badge emissions, audit logs
+│   └── ISSUE_TEMPLATE.md      # Canon threads for bug reports, feature requests
+├── src/
+│   ├── commands/              # Ritual definitions (e.g., summon, archive, emit)
+│   └── handlers/              # Webhook, IPN, and sponsor pulse logic
+├── assets/
+│   ├── badges/                # Visual sigils for merged PRs, sponsor tiers
+│   └── mascots/               # Peludo del Pueblo & allied campaign relics
+├── logs/
+│   ├── invocations/           # Timestamped PR events, badge emissions
+│   └── sponsors/              # Pledge receipts, role grants, audit trails
+├── dashboard/
+│   └── shards/                # Real-time views of PR status, badge flow, sponsor pulses
+└── scripts/
+    └── emitBadge.ts          # Deno script for webhook-triggered badge minting
