@@ -1,4 +1,20 @@
-name: "Audit Flamekeeper"
+name: Deno CI
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup Deno
+        uses: denoland/setup-deno@v1
+        with:
+          deno-version: v1.x
+      - name: Lint
+        run: deno lint
+      - name: Test
+        run: deno test --allow-read --allow-writename: "Audit Flamekeeper"
 mint_date: "2025-07-31"
 trigger_event: "Copilot review confirms production readiness of dropBadge function"
 recipient: "alexandros-thomson"
