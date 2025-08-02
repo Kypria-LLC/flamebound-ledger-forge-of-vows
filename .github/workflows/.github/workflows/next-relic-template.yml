@@ -1,0 +1,55 @@
+name: Invoke Next Relic
+
+on:
+  workflow_dispatch:
+    inputs:
+      relic_id:
+        description: 'Numeric ID for the new relic'
+        required: true
+        type: number
+
+jobs:
+  create-relic-entry:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Load variables
+        id: vars
+        run: |
+          ID=$(printf "%03d" ${{ github.event.inputs.relic_id }})
+          echo "ID=$ID" >> $GITHUB_ENV
+          echo "NAME=Relic $ID: The Next Echo" >> $GITHUB_ENV
+          echo "TIER=Ember" >> $GITHUB_ENV
+          echo "TIMESTAMP=$(date --utc +%Y-%m-%dT%H:%M:%SZ)" >> $GITHUB_ENV
+
+      - name: Append to badges.json
+        run: |
+          jq ". + {
+            (\$ID): {
+              id: \"\($ID)\",
+              name:    \"\($NAME)\",
+              image:   \"./assets/badges/relic-\($ID).png\",
+              tier:    \"\($TIER)\",
+              minted_at: \"\($TIMESTAMP)\",
+              channels: {
+                upload:   \"peludo-upload-📌\",
+                log:      \"logbook-entries\",
+                announce: \"announcements\"
+              },
+              description: \"The Ember flame burns anew.\"
+            }
+          }" badges.json > tmp.json && mv tmp.json badges.json
+
+      - name: Commit & PR
+        uses: peter-evans/create-pull-request@v5
+        with:
+          commit-message: Invoke Relic ${{ env.ID }}: The Next Echo
+          branch: relic-${{ env.ID }}
+          title: "Invoke Relic ${{ env.ID }}"
+          body: |
+            This PR invokes Relic ${{ env.ID }} into being.  
+            - Badge manifest updated  
+            - README injection next  
+            - Dashboard rebuild pending  
+          labels: relic, automation
