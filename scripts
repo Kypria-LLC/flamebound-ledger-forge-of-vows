@@ -1,3 +1,28 @@
-git add scripts/archive-warden-ritual.ts
+const fs = require("fs");
+const path = require("path");
+
+const badges = JSON.parse(fs.readFileSync("badges.json", "utf-8"));
+const readmePath = path.join(process.cwd(), "README.md");
+const readme = fs.readFileSync(readmePath, "utf-8");
+
+const startMarker = "<!-- relics start -->";
+const endMarker   = "<!-- relics end -->";
+
+const badgeLines = badges
+  .map(b => `- ![${b.name}](${b.image}) ${b.name}`)
+  .join("\n");
+
+const [before, rest] = readme.split(startMarker);
+const [, after] = rest.split(endMarker);
+
+const newReadme =
+  before +
+  startMarker + "\n" +
+  badgeLines + "\n" +
+  endMarker +
+  after;
+
+fs.writeFileSync(readmePath, newReadme);
+console.log("README.md regenerated with relic badges.");git add scripts/archive-warden-ritual.ts
 git commit -m "Add Archive Warden role ritual script"
 git push origin main
