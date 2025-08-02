@@ -1,0 +1,12 @@
+.
+├── badges.json
+├── scripts/
+│   └── generate-readme.js
+├── .github/
+│   └── workflows/
+│       ├── forge-readme.yml
+│       ├── deno.yml
+│       └── prepare-next-relic.yml
+├── announcements/
+│   └── ANNOUNCEMENT_MYTHIC_AUTOMATION.md
+└── README.md
