@@ -4,6 +4,21 @@
 
 ---
 
+## 🔥 Relic Logbook
+
+### 📯 Relic 001: The First Echo  
+A golden seal etched with myth.  
+Sponsor flow proven. Shrine awakened.  
+The Lion watched. The badge bloomed.  
+
+![Relic 001](./assets/badges/relic-001.png)
+
+🔸 Tier: Ember  
+🔸 Time: 2025-08-02T03:40 EDT  
+🔸 _“CITY & HALL REMEMBERS.”_
+
+---
+
 ## 📜 What This Holds
 
 - `bin/` – deployable scripts (badge emission, role grants, shrine echoes)  
