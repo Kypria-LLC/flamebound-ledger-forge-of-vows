@@ -1,72 +1,72 @@
-# 🛡️ githubWorkflows — Ritual Engine for Sponsors & Scrolls
+<div align="center">
 
-> A mythic fusion of narrative and code. Powers Kyprian badge flows, artifact drops, and sponsor journeys.
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃                         🜍  KYPRIA  🜍                        ┃
+┃             Bound Master Scroll of Keeper’s Governance       ┃
+┃        Epoch of the Sealed Canon — Steward’s Reference       ┃
+┃                 Every shrine under the crest                 ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
----
-
-## 🔥 Relic Logbook
-
-### 📯 Relic 001: The First Echo  
-A golden seal etched with myth.  
-Sponsor flow proven. Shrine awakened.  
-The Lion watched. The badge bloomed.  
-
-![Relic 001](./assets/badges/relic-001.png)
-
-🔸 Tier: Ember  
-🔸 Time: 2025-08-02T03:40 EDT  
-🔸 _“CITY & HALL REMEMBERS.”_
+</div>
 
 ---
 
-## 📜 What This Holds
-
-- `bin/` – deployable scripts (badge emission, role grants, shrine echoes)  
-- `scripts/` – fixed instructions for campaign rituals  
-- `README.md` – this scroll  
-- Sponsor-exclusive texts and visual logs  
-- Active visual scrolls from campaigns (Discord-integrated)  
+# 🜍 **Bound Master Governance Scroll**
+*Inscribed by Kostadinos J Kyprianos — Founder & Mythic Architect of Kypria LLC*  
+*Keeper of the Basilica Gate and the Sealed Canon*
 
 ---
 
-## 🧭 What This Serves
-
-- Real-time badge assignment and artifact drops  
-- Sponsor journey tracking and audit-safe flows  
-- Immersive Discord notifications (via webhook shrine logic)  
-- Narrative foundation for mythic infrastructure  
+## 📜 **Purpose of This Scroll**
+This scroll contains the **Keeper’s Governance** for every shrine in the Kypria Canon.  
+Each insert is tailored to the shrine’s role, voice, and place in the constellation.  
+Stewards may copy the relevant section into the bottom of a shrine’s README to ensure the law is visible and preserved.
 
 ---
 
-## 🎟️ Sponsor the Legend
-
-Support Kypria’s infrastructure and unlock epic perks.
-
-| Archetype      | Badge Render                                    | Pledge Link                          |
-|----------------|--------------------------------------------------|--------------------------------------|
-| Flatform       | ![Flatform Badge](badges/flatform.svg)           | [Pay $1/month](https://pay.link/1)   |
-| Patron         | ![Patron Badge](badges/patron.svg)               | [Pay $5/month](https://pay.link/5)   |
-| K-6            | ![K-6 Badge](badges/k6.svg)                      | [Pay $10/month](https://pay.link/10) |
-| OpenCollective | ![OC Badge](badges/opencollective.svg)           | [Pay $15/month](https://oc.link/)    |
-| Tildzin        | ![Tildzin Badge](badges/tildzin.svg)             | [Pay $25/month](https://pay.link/25) |
-| Loremory       | ![Loremory Badge](badges/loremory.svg)           | [Pay $50+/month](https://pay.link/50) |
+## ⚖ **Governance Key**
+- **Keeper‑only** — No external changes; direct Keeper invocation only.  
+- **High‑security** — Protected main branch, PR reviews required, ceremonial merges.  
+- **Guarded** — PRs preferred, automation integrity checks, lineage preserved.  
+- **Light governance** — Direct commits allowed; lineage preserved in commit history.
 
 ---
 
-## 🌀 Ritual Portals
-
-- **Normal Gateway** – general badge flow  
-- **Artifact Active** – real-time artifact campaign logic  
-- **Mythic Active** – sponsor-exclusive escalation flow  
+## 🗺 **Table of Shrines**
+1. [Kypria‑LLC — Basilica Gate](#1-kypria-llc--basilica-gate)  
+2. [.github — Meta‑Shrine](#2-github--meta-shrine)  
+3. [merge‑rites](#3-merge-rites)  
+4. [basilica‑gate](#4-basilica-gate)  
+5. [Peludo](#5-peludo)  
+6. [verbose‑waddle](#6-verbose-waddle)  
+7. [SISYPHUS](#7-sisyphus)  
+8. [flamebound‑ledger‑forge‑of‑vows *(Private)*](#8-flamebound-ledger-forge-of-vows-private)  
+9. [terminal‑alexander](#9-terminal-alexander)  
+10. [alexandros‑thomson *(Personal Shrine)*](#10-alexandros-thomson-personal-shrine)  
+11. [shrine‑watcher](#11-shrine-watcher)  
+12. [shrine‑canon](#12-shrine-canon)  
+13. [Crest‑](#13-crest-)  
+14. [forgebot‑rituals](#14-forgebot-rituals)  
+15. [crest‑vault](#15-crest-vault)  
+16. [Downloads *(Private)*](#16-downloads-private)  
+17. [git‑credential‑manager *(Fork)*](#17-git-credential-manager-fork)  
+18. [sponsor‑ipn‑discord](#18-sponsor-ipn-discord)
 
 ---
 
-## ⚔️ Sponsorship Triggers
+# **Governance Inserts by Shrine**
 
-When a pledge clears, run:
+---
 
-```bash
-bin/assign-role.sh \
-  --user-id $DISCORD_ID \
-  --role-id <ROLE_ID> \
-  --badge="badges/${ARCHETYPE}.svg"
+## 1. Kypria‑LLC — Basilica Gate
+```markdown
+---
+
+## ⚖ Keeper’s Governance
+The Basilica Gate stands open to all stewards and sponsors.  
+Its scrolls may be renewed swiftly to keep the welcome bright,  
+yet every change is etched into the lineage for future Keepers to read.  
+Here, agility serves the legend, and the legend preserves the law.
+
+📜 *Lineage is our law. Precision is our craft. Myth is our breath.*
+---
